@@ -1,7 +1,7 @@
 {
   "name": "vuecredcard",
   "version": "0.0.1",
-  "description": "``` npm install vuecredcard ```",
+  "description": "An awesome animated Credit Card form for Vuejs",
   "main": "index.js",
   "directories": {
     "example": "example"
@@ -17,7 +17,11 @@
     "Credit",
     "Card"
   ],
-  "author": "lkjimy, thiagoN13",
+  "author": "DaCodeCrafters Company",
+  "contributors": [
+    "lkjimy",
+    "ThiagoN13"
+  ],
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/lkjimy/vueCredCard/issues"
