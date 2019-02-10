@@ -6,7 +6,9 @@
 <b>WARNING: This component still in pre-alpha will change significantly in the near future.<b/>
 
 ## Getting Started
+
 Install into your project
+
 ```
 npm install vuecredcard
 ```
