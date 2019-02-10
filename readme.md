@@ -1,5 +1,5 @@
 # VueCreditCard 
-[![GitHub license](https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat)](https://github.com/lkjimy/vueCredCard/blob/master/LICENSE) [![npm](https://img.shields.io/badge/npm-v0.0.1-red.svg?style=flat&logo=npm)](https://www.npmjs.com/package/vuecredcard) ![Releases](https://img.shields.io/badge/releases-none-red.svg?style=flat)
+[![GitHub license](https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat)](https://github.com/lkjimy/vueCredCard/blob/master/LICENSE) [![npm](https://img.shields.io/badge/npm-v0.0.1-red.svg?style=flat&logo=npm)](https://www.npmjs.com/package/vuecredcard) [![Releases](https://img.shields.io/badge/releases-none-red.svg?style=flat)](https://github.com/lkjimy/vueCredCard/releases)
 
 > An awesome animated Credit Card form
 
