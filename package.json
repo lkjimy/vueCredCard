@@ -7,7 +7,8 @@
     "example": "example"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,21 @@
     "url": "https://github.com/lkjimy/vueCredCard/issues"
   },
   "homepage": "https://github.com/lkjimy/vueCredCard#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "css-loader": "^2.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "vue-loader": "^15.6.4",
+    "vue-template-compiler": "^2.5.21",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.0"
+  },
+  "dependencies": {
+    "credit-card-type": "^8.1.0",
+    "moment": "^2.24.0"
+  }
 }
