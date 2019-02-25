@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+// Card size
+$height: 54px * 3;
+$width: $height * 1.58;
+$radius: $height / 18;
+
+// Brand colors
+// AMEX           #2570D1
+// AURA           #2E3192 #ED2324 #FCF201
+// Brasilcard     #0E9A53 #086D3F
+// Cabal          #0A2A5C
+// Cardban        #2898D9 #F58634 #373435
+// Diners         #2179BD
+// ELO            #FCC708 #39A7E4 #EF3121 #000000
+// Fortbrasil     #264E24
+// Grandcard      #0B315F
+// Hipercard      #B3181B
+// Mais           #000000
+// Mastercard     #EB2313 #FB5F00 #F89F15
+// Personalcard   #076839 #4CB647
+// Plenocard      #28496B #F58634 #0C3B63
+// Sorocred       #FAE37D #F2BE2F
+// Valecard       #153C8E #EE2745 #FCB330 #164C8A
+
+$cl-visa: (
+  "primary": #1A57A2,
+  "secondary": #171954,
+  "support": #152A8E
+);

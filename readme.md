@@ -16,9 +16,21 @@ npm install vuecredcard
 ### Use
 
 ```
-import VueCredCard from 'vuecredcard';
+import VueCredCard from 'vuecredcard'
 
-Vue.use(VueCredCard)
+export default {
+    components: {
+        VueCredCard
+    }
+}
 ```
 
 ## Configuration
+
+
+## Dev enviroment
+
+```
+npm install
+npm run dev
+```
