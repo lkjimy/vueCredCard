@@ -6,6 +6,13 @@ $width: $height * 1.58;
 $radius: $height / 18;
 
 // Brand colors
+// American ex
+// China unionpay
+// Discover
+// JCB
+// Laser
+// Maestro
+// Dankort
 // AMEX           #2570D1
 // AURA           #2E3192 #ED2324 #FCF201
 // Brasilcard     #0E9A53 #086D3F
@@ -28,3 +35,124 @@ $cl-visa: (
   "secondary": #171954,
   "support": #152A8E
 );
+
+$brands: (
+  visa: (
+    primary: #1A57A2,
+    secondary: #171954,
+    support: #152A8E,
+    text: #FFFFFF
+  ),
+  elo: (
+    primary: ,
+    secondary: ,
+    support: ,
+    text: 
+  ),
+  american: (
+    primary: ,
+    secondary: ,
+    support: ,
+    text: 
+  ),
+  amex: (
+    primary: ,
+    secondary: ,
+    support: ,
+    text: 
+  ),
+  aura: (
+    primary: ,
+    secondary: ,
+    support: ,
+    text: 
+  ),
+  brasilcard: (
+    primary: ,
+    secondary: ,
+    support: ,
+    text: 
+  ),
+  cabal: (
+    primary: ,
+    secondary: ,
+    support: ,
+    text: 
+  ),
+  cardban: (
+    primary: ,
+    secondary: ,
+    support: ,
+    text: 
+  ),
+  diners: (
+    primary: ,
+    secondary: ,
+    support: ,
+    text: 
+  ),
+  fortbrasil: (
+    primary: ,
+    secondary: ,
+    support: ,
+    text: 
+  ),
+  grandcard: (
+    primary: ,
+    secondary: ,
+    support: ,
+    text: 
+  ),
+  hipercard: (
+    primary: ,
+    secondary: ,
+    support: ,
+    text: 
+  ),
+  mais: (
+    primary: ,
+    secondary: ,
+    support: ,
+    text: 
+  ),
+  mastercard: (
+    primary: ,
+    secondary: ,
+    support: ,
+    text: 
+  ),
+  personalcard: (
+    primary: ,
+    secondary: ,
+    support: ,
+    text: 
+  ),
+  plenocard: (
+    primary: ,
+    secondary: ,
+    support: ,
+    text: 
+  ),
+  sorocred: (
+    primary: ,
+    secondary: ,
+    support: ,
+    text: 
+  ),
+  valecard: (
+    primary: ,
+    secondary: ,
+    support: ,
+    text: 
+  ),
+);
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+@debug map-deep-get($brands, visa, test, 1);
+@debug map-deep-get($brands, elo);
