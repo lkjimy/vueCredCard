@@ -3,12 +3,20 @@ const { VueLoaderPlugin } = require('vue-loader')
 const path = require('path')
 
 module.exports = {
-  entry:[
+  context: path.resolve(__dirname, './'),
+  entry: [
     "./example/src/main.js"
   ],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
+  },
+  resolve: {
+    extensions: ['.js', '.vue', '.json', '.png'],
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js',
+      '@': path.resolve(__dirname, 'src/')
+    }
   },
   module: {
     rules: [
@@ -16,7 +24,8 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         query: {
-          limit: 10000
+          limit: 10000,
+          name: 'images/[name].[hash:7].[ext]'
         }
       },
       {
