@@ -43,13 +43,8 @@
 </template>
 
 <script>
-  import VueCredCard from '../../src/VueCredCard.vue'
-
   export default {
     name: 'app',
-    components: {
-      VueCredCard
-    },
     data () {
       return {
         expirationDate: null,
