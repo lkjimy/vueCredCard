@@ -23,8 +23,20 @@ $radius: $height / 18;
 // Sorocred       #FAE37D #F2BE2F
 // Valecard       #153C8E #EE2745 #FCB330 #164C8A
 
+$cl-default: (
+  "primary": rgb(172, 172, 172),
+  "secondary": rgb(255, 255, 255),
+  "support": rgb(119, 111, 97)
+);
+
 $cl-visa: (
   "primary": #1A57A2,
   "secondary": #171954,
   "support": #152A8E
+);
+
+$cl-mastercard: (
+  "primary": #EB2313,
+  "secondary": #FB5F00,
+  "support": #F89F15
 );

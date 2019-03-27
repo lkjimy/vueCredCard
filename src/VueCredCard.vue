@@ -154,7 +154,6 @@
     },
     watch: {
       async brand () {
-        console.log('here')
         this.loadBrandLogo()
       }
     }
@@ -163,23 +162,13 @@
 
 <style scoped lang="scss">
 @import './styles/variables.scss';
+@import './styles/cards.scss';
 
 .Ccard {
   height: $height;
   width: $width;
   position: relative;
   font-family: 'Share Tech Mono', monospace;
-
-  &.visa {
-    color: darken(white, .8);
-
-    .card-face {
-      background: linear-gradient(45deg, map-get($cl-visa, primary), lighten(map-get($cl-visa, primary), 15%));
-    }
-    .card-back {
-      background: linear-gradient(45deg, map-get($cl-visa, primary), lighten(map-get($cl-visa, primary), 15%));
-    }
-  }
 
   %cardStyles {
     position: absolute;

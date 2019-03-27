@@ -1,0 +1,32 @@
+@import './variables.scss';
+
+.Ccard {
+  .card-face {
+    background: linear-gradient(45deg, map-get($cl-default, primary), lighten(map-get($cl-default, primary), 15%));
+  }
+  .card-back {
+    background: linear-gradient(45deg, map-get($cl-default, primary), lighten(map-get($cl-default, primary), 15%));
+  }
+
+  &.visa {
+    color: darken(white, .8);
+
+    .card-face {
+      background: linear-gradient(45deg, map-get($cl-visa, primary), lighten(map-get($cl-visa, primary), 15%));
+    }
+    .card-back {
+      background: linear-gradient(45deg, map-get($cl-visa, primary), lighten(map-get($cl-visa, primary), 15%));
+    }
+  }
+
+  &.mastercard {
+    color: darken(white, .8);
+
+    .card-face {
+      background: linear-gradient(45deg, map-get($cl-mastercard, primary), lighten(map-get($cl-mastercard, primary), 15%));
+    }
+    .card-back {
+      background: linear-gradient(45deg, map-get($cl-mastercard, primary), lighten(map-get($cl-mastercard, primary), 15%));
+    }
+  }
+}
