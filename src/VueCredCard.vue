@@ -6,7 +6,7 @@
   
         <div class="form-row justify-content-end mt-2 mb-4">
           <div class="col-auto">
-            <img class="logo" src="./images/visa.png" alt="visa logo">
+            <img class="logo" :src="imgCard" alt="card logo">
           </div>
         </div>
   
@@ -70,8 +70,12 @@
     data () {
       return {
         cardInverted: false,
-        brand: null
+        brand: null,
+        imgCard: null
       }
+    },
+    created () {
+      this.loadBrandLogo()
     },
     methods: {
       /**
@@ -82,10 +86,13 @@
       },
 
       getCardBrand () {
-        const bin = this.cardNumber.replace(/^(\d{4})(\d)/g,'$1 $2')
+        const bin = (this.cardNumber || '').replace(/^(\d{4})(\d)/g,'$1 $2')
 
-        if (bin && bin.length === 4) {
+        if (!bin) {
+          this.brand = null
+        } else {
           const [ brand = {} ] = creditCardType(bin)
+
           this.brand = brand.type
         }
       },
@@ -103,6 +110,13 @@
         return cardNumber
       },
 
+      async loadBrandLogo () {
+        const imagePath = this.brand ? `./images/${this.brand}.png` : './images/default.png'
+
+        const image = await import(/* webpackMode: "eager" */ '' + imagePath + '')
+        this.imgCard = image.default
+      },
+
       setTurnAround () {
         this.cardInverted = true
       },
@@ -113,9 +127,9 @@
     },
     computed: {
       cardNumberFormatted () {
-        if (!this.cardNumber) return '0000 0000 0000 0000'
-
         this.getCardBrand()
+
+        if (!this.cardNumber) return '0000 0000 0000 0000'
 
         return this.maskCardNumber(this.cardNumber)
       },
@@ -136,6 +150,12 @@
         if (!this.expirationYear) return 'XXXX'
 
         return moment(this.expirationYear).format('YYYY')
+      }
+    },
+    watch: {
+      async brand () {
+        console.log('here')
+        this.loadBrandLogo()
       }
     }
   }
@@ -179,6 +199,7 @@
 
     .logo {
       max-width: 50px;
+      max-height: 20px
     }
 
     #cardNumber {
