@@ -20,7 +20,7 @@
         </div>
   
         <div class="form-group">
-          <input type="text" class="form-control" maxlength="16" v-model="cardNumber" placeholder="Credit card number" @focus="setTurnAroundInverted">
+          <input type="number" class="form-control" maxlength="16" v-model="cardNumber" placeholder="Credit card number" @focus="setTurnAroundInverted">
         </div>
   
         <div class="form-row">
