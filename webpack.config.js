@@ -8,7 +8,7 @@ module.exports = {
     "./example/src/main.js"
   ],
   resolve: {
-    extensions: ['.js', '.vue', '.json', '.png'],
+    extensions: ['.js', '.vue', '.png'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': path.resolve(__dirname, 'src/')
@@ -45,7 +45,6 @@ module.exports = {
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       hash: true,
-      title: 'Vue CredCard',
       template: './example/public/index.html'
     })
   ]
