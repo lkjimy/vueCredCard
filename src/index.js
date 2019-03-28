@@ -1,6 +1,7 @@
 import VueCredCard from './VueCredCard.vue'
 import defaultOptions from './options'
 import creditCardType from 'credit-card-type'
+import './styles/main.scss'
 
 function plugin (Vue, options = {}) {
   const opt = Object.assign(defaultOptions, options)
