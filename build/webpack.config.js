@@ -1,12 +1,7 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { VueLoaderPlugin } = require('vue-loader')
 const path = require('path')
 
 module.exports = {
   context: path.resolve(__dirname, './'),
-  entry: [
-    "./example/src/main.js"
-  ],
   resolve: {
     extensions: ['.js', '.vue', '.png'],
     alias: {
@@ -22,6 +17,16 @@ module.exports = {
         query: {
           name: 'images/[name].[hash:7].[ext]'
         }
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [{
+            loader: 'file-loader',
+            options: {
+                name: '[name].[ext]',
+                outputPath: 'fonts/'
+            }
+        }]
       },
       {
         test: /\.css?$/,
@@ -40,12 +45,5 @@ module.exports = {
         ]
       }
     ]
-  },
-  plugins: [
-    new VueLoaderPlugin(),
-    new HtmlWebpackPlugin({
-      hash: true,
-      template: './example/public/index.html'
-    })
-  ]
+  }
 } 
