@@ -1,6 +1,6 @@
 {
   "name": "vuecredcard",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "An awesome animated Credit Card form for Vuejs",
   "main": "./dist/main.js",
   "directories": {
