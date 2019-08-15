@@ -3,7 +3,10 @@ import defaultOptions from './options'
 import creditCardType from 'credit-card-type'
 import './styles/main.scss'
 
-function plugin (Vue, options = {}) {
+// Version
+const version = '0.0.0'
+
+function install (Vue, options = {}) {
   const opt = Object.assign(defaultOptions, options)
   const { cards = [] } = opt
 
@@ -16,14 +19,13 @@ function plugin (Vue, options = {}) {
 
 // Install by default if using the script tag
 if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(plugin)
+  install(window.Vue)
 }
 
-export default plugin
-const version = '__VERSION__'
 // Export all components too
-export {
+export default {
+  version,
   creditCardType,
   VueCredCard,
-  version
+  install
 }
