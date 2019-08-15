@@ -51,7 +51,6 @@
     "webpack-dev-server": "^3.2.0"
   },
   "dependencies": {
-    "credit-card-type": "^8.1.0",
-    "moment": "^2.24.0"
+    "credit-card-type": "^8.1.0"
   }
 }

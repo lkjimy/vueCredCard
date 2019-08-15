@@ -45,7 +45,6 @@
 </template>
 
 <script>
-  import moment from 'moment'
   import creditCardType from 'credit-card-type'
 
   export default {
@@ -98,10 +97,11 @@
       },
 
       maskCardNumber (cardNumber = ''){
-        cardNumber = cardNumber.replace(/\D/g,'')
-        cardNumber = cardNumber.replace(/^(\d{4})(\d)/g,'$1 $2')
-        cardNumber = cardNumber.replace(/^(\d{4})\s(\d{4})(\d)/g,'$1 $2 $3')
-        cardNumber = cardNumber.replace(/^(\d{4})\s(\d{4})\s(\d{4})(\d)/g,'$1 $2 $3 $4')
+        cardNumber = cardNumber
+          .replace(/\D/g,'')
+          .replace(/^(\d{4})(\d)/g,'$1 $2')
+          .replace(/^(\d{4})\s(\d{4})(\d)/g,'$1 $2 $3')
+          .replace(/^(\d{4})\s(\d{4})\s(\d{4})(\d)/g,'$1 $2 $3 $4')
 
         if (cardNumber.length >= 19) {
           return cardNumber.slice(0, 19)
@@ -143,13 +143,13 @@
       expirationMonthFormatted () {
         if (!this.expirationMonth) return 'XX'
 
-        return moment(this.expirationMonth).format('MM')
+        return new Date(this.expirationMonth).getMonth().toString().padStart(2, '0')
       },
 
       expirationYearFormatted () {
         if (!this.expirationYear) return 'XXXX'
 
-        return moment(this.expirationYear).format('YYYY')
+        return new Date(this.expirationYear).getFullYear('YYYY')
       }
     },
     watch: {
