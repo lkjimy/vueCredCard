@@ -1,8 +1,8 @@
 {
   "name": "vuecredcard",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "An awesome animated Credit Card form for Vuejs",
-  "main": "index.js",
+  "main": "./dist/main.js",
   "directories": {
     "example": "example"
   },
@@ -12,11 +12,12 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "deploy": "gh-pages -d ./docs/.vuepress/dist",
-    "full-deploy": "npm run docs:build && npm run deploy"
+    "full-deploy": "npm run docs:build && npm run deploy",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lkjimy/vueCredCard.git"
+    "url": "https://github.com/lkjimy/vueCredCard.git"
   },
   "keywords": [
     "Credit",
@@ -39,6 +40,7 @@
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
+    "semantic-release": "^15.13.3",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "vue-loader": "^15.6.4",

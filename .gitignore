@@ -62,6 +62,3 @@ typings/
 
 # Static documentation folder
 docs/.vuepress/dist
-
-# Folder dist
-/dist
