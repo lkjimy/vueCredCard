@@ -1,0 +1,10 @@
+# Remove folder /example
+/example
+# Remove folder /docs
+/docs
+# Remove folder /build
+/build
+# Remove folder /tests
+/tests
+# Remove folder /src
+/src
