@@ -8,7 +8,7 @@
     "serve": "vue-cli-service serve"
   },
   "dependencies": {
-    "acorn": "^6.1.0",
+    "acorn": "^6.4.1",
     "bootstrap": "^4.2.1",
     "vue": "^2.5.22"
   },
